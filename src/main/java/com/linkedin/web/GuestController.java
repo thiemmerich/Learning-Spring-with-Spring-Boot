@@ -1,6 +1,5 @@
 package com.linkedin.web;
 
-import java.util.Date;
 import java.util.List;
 
 import com.linkedin.data.Guest;

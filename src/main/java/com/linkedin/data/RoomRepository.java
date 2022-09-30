@@ -1,6 +1,6 @@
 package com.linkedin.data;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
  * Spring
  */
 @Repository
-public interface RoomRepository extends CrudRepository<Room, Long> {
+public interface RoomRepository extends JpaRepository<Room, Long> {
 
 }

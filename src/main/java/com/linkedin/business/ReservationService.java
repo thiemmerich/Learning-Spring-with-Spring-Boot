@@ -14,6 +14,7 @@ import com.linkedin.data.ReservationRepository;
 import com.linkedin.data.Room;
 import com.linkedin.data.RoomRepository;
 
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,6 +29,18 @@ public class ReservationService {
 		this.roomRepository = roomRepository;
 		this.guestRepository = guestRepository;
 		this.reservationRepository = reservationRepository;
+	}
+
+	public List<Guest> getGuests() {
+		return this.guestRepository.findAll();
+	}
+
+	public void addGuest(@NonNull Guest guest) {
+		this.guestRepository.save(guest);
+	}
+
+	public List<Room> getRooms() {
+		return this.roomRepository.findAll();
 	}
 
 	public List<RoomReservation> getRoomReservationsForDate(Date date) {
